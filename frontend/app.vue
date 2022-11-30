@@ -1,7 +1,7 @@
 <template>
-    <img class="swoop" src="./Mtn-Swoop.png" alt="Swoop" />
+    <img class="swoop" src="@/Mtn-Swoop.png" alt="Swoop" />
   <div class="card">
-    <img class="logo" src="./SDMIA-Logo.png" alt="SDMIA Logo" />
+    <img class="logo" src="@/SDMIA-Logo.png" alt="SDMIA Logo" />
     <!-- <p>Coming Soon</p> -->
   </div>
 </template>
