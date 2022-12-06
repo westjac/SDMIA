@@ -1,7 +1,7 @@
 <template>
-    <img class="swoop" src="./Mtn-Swoop.png" alt="Swoop" />
+    <img class="swoop" src="~/assets/Mtn-Swoop.png" alt="Swoop" />
   <div class="card">
-    <img class="logo" src="./SDMIA-Logo.png" alt="SDMIA Logo" />
+    <img class="logo" src="~/assets/SDMIA-Logo.png" alt="SDMIA Logo" />
     <!-- <p>Coming Soon</p> -->
   </div>
 </template>
@@ -34,7 +34,7 @@
     opacity: 10%;
     height: auto;
     position: absolute;
-    bottom: -140px;
+    bottom: -120px;
     left: -190px;
     overflow: hidden;
   }
