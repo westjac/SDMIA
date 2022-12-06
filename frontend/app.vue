@@ -2,7 +2,7 @@
     <img class="swoop" src="~/assets/Mtn-Swoop.png" alt="Swoop" />
   <div class="card">
     <img class="logo" src="~/assets/SDMIA-Logo.png" alt="SDMIA Logo" />
-    <!-- <p>Coming Soon</p> -->
+    <p class="coming-soon-text">Coming Soon | info@SDMineralIndustries.org</p>
   </div>
 </template>
 
@@ -14,6 +14,7 @@
     background-color: #123c62;
     overflow: hidden;
     background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .card {
@@ -37,5 +38,11 @@
     bottom: -120px;
     left: -190px;
     overflow: hidden;
+  }
+
+  .coming-soon-text {
+    font-size: medium;
+    font-weight: bolder;
+    color: white;
   }
 </style>
