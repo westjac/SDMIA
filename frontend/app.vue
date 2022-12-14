@@ -2,7 +2,7 @@
     <img class="swoop" src="~/assets/Mtn-Swoop.png" alt="Swoop" />
   <div class="card">
     <img class="logo" src="~/assets/SDMIA-Logo.png" alt="SDMIA Logo" />
-    <p class="coming-soon-text">Coming Soon | info@SDMineralIndustries.org</p>
+    <p class="coming-soon-text">This is Dev | info@SDMineralIndustries.org</p>
   </div>
 </template>
 
