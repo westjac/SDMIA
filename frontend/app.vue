@@ -1,12 +1,17 @@
 <template>
-    <img class="swoop" src="~/assets/Mtn-Swoop.png" alt="Swoop" />
-  <div class="card">
-    <img class="logo" src="~/assets/SDMIA-Logo.png" alt="SDMIA Logo" />
-    <p class="coming-soon-text">This is Dev | info@SDMineralIndustries.org</p>
-  </div>
+  <NuxtLayout>
+    <v-app>
+      <TopNav />
+
+      <NuxtPage class="pageContent"/>
+    </v-app>
+  </NuxtLayout>
 </template>
 
 <style>
+  .pageContent {
+    margin-top: -200px;
+  }
   body {
     margin: 0;
     padding: 0;
