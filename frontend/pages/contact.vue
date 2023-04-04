@@ -30,7 +30,7 @@
 
 <style scoped>
   .dividerBar {
-    background-color: #3FB65D;
+    background-color: #3FB65D; 
     height: 140px;
   }
   .contactSection {
