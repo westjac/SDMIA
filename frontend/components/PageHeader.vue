@@ -49,7 +49,6 @@
             position: absolute;
             top: 16em;
             max-width: 80%;
-            padding: 0 2rem;
             text-align: left;
             color: #fff;
             z-index: 1;
