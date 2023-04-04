@@ -43,6 +43,32 @@
 
   .top-nav links {
     display: flex;
+    
   }
+  .top-nav .links a{
+    font-weight: bold;
+    color: #123C62; /* dark blue */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* slight drop shadow */
+    transition: all 0.3s ease-in-out; /* smooth transition when hovered over */
+    font-size: large;
+  }
+
+  .top-nav .links a:hover {
+    color: #34495e; /* slightly lighter blue */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* stronger drop shadow */
+    transform: translateY(-4px); /* slight upward movement */
+  }
+
+  .top-nav .links a:visited {
+    font-weight: bold;
+    color: #123C62; /* dark blue */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* slight drop shadow */
+    transition: all 0.3s ease-in-out; /* smooth transition when hovered over */
+    text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
   </style>
   
