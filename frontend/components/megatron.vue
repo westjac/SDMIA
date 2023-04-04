@@ -94,7 +94,7 @@
         }
         
         .hero-content button:hover {
-            background-color: #000;
+            background-color: #3FB65D;
             color: #fff;
         }
   </style>

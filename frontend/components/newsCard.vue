@@ -6,7 +6,7 @@
       <div class="article-card__content">
         <h3 class="article-card__title">{{ title }}</h3>
         <p class="article-card__description">{{ description }}</p>
-        <a :href="link" class="article-card__link">Read more -></a>
+        <a :href="link" class="article-card__link">Read more ></a>
       </div>
     </div>
   </template>
