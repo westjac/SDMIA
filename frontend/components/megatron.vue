@@ -62,7 +62,7 @@
         .hero-content {
             position: absolute;
             top: 20em;
-            left: 10em;
+            left: 6em;
             max-width: 80%;
             padding: 0 2rem;
             text-align: left;

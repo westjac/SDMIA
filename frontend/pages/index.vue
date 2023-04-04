@@ -10,7 +10,7 @@
       buttonText="More About SDMIA >"
     />
     <div class="dividerBar"></div>
-    <h1>Featured News & Resources</h1>
+    <NewsAndResources />
 
   </div>
 </template>

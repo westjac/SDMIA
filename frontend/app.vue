@@ -4,6 +4,8 @@
       <TopNav />
 
       <NuxtPage class="pageContent"/>
+
+      <Footer />
     </v-app>
   </NuxtLayout>
 </template>
