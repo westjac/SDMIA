@@ -3,13 +3,13 @@
       <v-container>
         <v-row align="center">
           <v-col>
+          <a href="/">
             <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
-          </v-col>
-        </v-row>
-        <v-row align="center" justify="center">
-          <div class="links">
-            <a v-for="(link, index) in links" :key="index" href="#">{{ link }}</a>
+          </a>
+            <div class="links">
+            <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
           </div>
+          </v-col>
         </v-row>
       </v-container>
     </nav>
@@ -20,7 +20,24 @@
     name: 'TopNav',
     data() {
       return {
-        links: ['Mining in SD', 'Resources', 'About SDMIA', 'Contact Us']
+        links: [
+          {
+            label: 'Mining in SD',
+            slug: '/mining-in-sd',
+          }, 
+          {
+            label: 'Resources',
+            slug: '/resources'
+          },
+          {
+            label: 'About SDMIA',
+            slug: '/about'
+          },
+          {
+            label: 'Contact',
+            slug: '/contact'
+          },
+        ]
       }
     }
   }
@@ -41,10 +58,11 @@
     text-align: center;
   }
 
-  .top-nav links {
+  .top-nav .links {
     display: flex;
-    
+    justify-content: center;
   }
+  
   .top-nav .links a{
     font-weight: bold;
     color: #123C62; /* dark blue */
@@ -56,7 +74,7 @@
   .top-nav .links a:hover {
     color: #34495e; /* slightly lighter blue */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* stronger drop shadow */
-    transform: translateY(-4px); /* slight upward movement */
+    transform: translateY(-2px); /* slight upward movement */
   }
 
   .top-nav .links a:visited {
