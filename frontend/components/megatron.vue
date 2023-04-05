@@ -6,7 +6,7 @@
       <div class="hero-content">
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
-        <button>{{ buttonText }}</button>
+        <a target="_blank" :href="buttonLink">{{ buttonText }}</a>
       </div>
     </div>
   </template>
@@ -31,6 +31,10 @@
             required: true,
         },
         buttonText: {
+            type: String,
+            required: true,
+        },
+        buttonLink: {
             type: String,
             required: true,
         },
@@ -81,7 +85,7 @@
             margin-bottom: 2rem;
         }
         
-        .hero-content button {
+        .hero-content a {
             padding: 1rem 2rem;
             font-size: 1.2rem;
             font-weight: bold;
@@ -91,9 +95,10 @@
             border-radius: 4px;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
         
-        .hero-content button:hover {
+        .hero-content a:hover {
             background-color: #3FB65D;
             color: #fff;
         }

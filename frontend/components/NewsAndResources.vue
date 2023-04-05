@@ -5,7 +5,7 @@
         photo="/images/warf.jpg"
         title="SDMIA 2022 Annual Meeting"
         description="View our presentation from our annual meeting held in December 2022."
-        link="#"
+        link="/docs/SME_Meeting_092923.pdf"
         />
     </div>
 </template>
