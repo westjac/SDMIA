@@ -16,6 +16,7 @@
     </nav>
 
     <!-- START OF MOBILE NAVIGATION MENU -->
+    <div v-if="isMobile" class="mobile-nav-space"></div>
     <div v-if="isMobile" class="mobile-nav">
       <nav class="mobile">
         <a href="/">
@@ -137,6 +138,8 @@ a {
 
 .mobile-nav {
   z-index: 1;
+  position: fixed;
+  width: 100%;
 
 }
 
@@ -180,6 +183,10 @@ a {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* slight drop shadow */
     transition: all 0.3s ease-in-out; /* smooth transition when hovered over */
     text-decoration: none;
+}
+
+.mobile-nav-space {
+  height: 90px;
 }
   </style>
   
