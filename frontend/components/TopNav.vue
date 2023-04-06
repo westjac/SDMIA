@@ -1,4 +1,19 @@
 <template>
+    <nav v-show="!isMobile" class="top-nav">
+      <v-container>
+        <v-row align="center">
+          <v-col>
+          <a href="/">
+            <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
+          </a>
+            <div class="links">
+            <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
+            <v-icon icon="mdi-vuetify"></v-icon>
+          </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </nav>
     <nav class="top-nav">
       <v-container>
         <v-row align="center">
@@ -15,12 +30,8 @@
     </nav>
   </template>
   
-  <script>
-  export default {
-    name: 'TopNav',
-    data() {
-      return {
-        links: [
+  <script setup>
+        let links = [
           {
             label: 'Mining in SD',
             slug: '/mining-in-sd',
@@ -38,9 +49,9 @@
             slug: '/contact'
           },
         ]
-      }
-    }
-  }
+
+        const isMobile = ref(false);
+        
   </script>
   
   <style scoped>
