@@ -63,4 +63,10 @@
     width: 370px;
     height: auto;
   }
+
+  @media screen and (max-width: 960px) {
+    .contactSection {
+      flex-direction: column;
+    }
+  }
 </style>
