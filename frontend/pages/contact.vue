@@ -68,5 +68,8 @@
     .contactSection {
       flex-direction: column;
     }
+    .dividerBar {
+      height: 60px;
+    }
   }
 </style>
