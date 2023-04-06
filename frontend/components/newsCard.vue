@@ -92,5 +92,32 @@
     background-color: #3FB65D;
     color: #fff;
   }
+
+  /* Media Query for smaller screen sizes */
+  @media (max-width: 960px) {
+    .article-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .article-card__image-wrapper {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .article-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .article-card__content {
+    text-align: center;
+  }
+  }
   </style>
   

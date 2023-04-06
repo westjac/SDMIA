@@ -70,6 +70,7 @@
     background-color: rgba(255, 255, 255, 0.90);
     z-index: 1; /* set a higher z-index value for the nav */
     position: relative; /* set position to relative */
+    z-index: 1000;
   }
   
   .top-nav a {

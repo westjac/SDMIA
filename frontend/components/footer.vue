@@ -62,4 +62,10 @@
   color: #333;
   font-weight: bold;
 }
+
+@media screen and (max-width: 960px) {
+  .footer-left {
+    margin-left: 2em;
+  }
+}
 </style>

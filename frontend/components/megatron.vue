@@ -58,7 +58,7 @@
             text-align: left;
             color: #fff;
             z-index: 1;
-            margin-bottom: 18em;
+            margin-bottom: 16em;
             margin-left: 6em;
         }
         
@@ -78,7 +78,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             background-color: #fff;
-            color: #000;
+            color: #34495e;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -104,7 +104,7 @@
 
             .hero-content a {
             padding: 0.5rem 1rem;
-            font-size: 0.8rem;
+            font-size: 1.1rem;
             }
         }
 
