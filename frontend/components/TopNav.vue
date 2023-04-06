@@ -25,26 +25,40 @@
   </template>
   
   <script setup>
-        let links = [
-          {
-            label: 'Mining in SD',
-            slug: '/mining-in-sd',
-          }, 
-          {
-            label: 'Resources',
-            slug: '/resources'
-          },
-          {
-            label: 'About SDMIA',
-            slug: '/about'
-          },
-          {
-            label: 'Contact',
-            slug: '/contact'
-          },
-        ]
+    const isMobile = ref(false);
+    let links = [
+      {
+        label: 'Mining in SD',
+        slug: '/mining-in-sd',
+      }, 
+      {
+        label: 'Resources',
+        slug: '/resources'
+      },
+      {
+        label: 'About SDMIA',
+        slug: '/about'
+      },
+      {
+        label: 'Contact',
+        slug: '/contact'
+      },
+    ]
+    
+    //RESPONSIVE MENU FUNCTIONS
+    function handleResize() {
+      isMobile.value = window.innerWidth <= 960;
+    }
 
-        const isMobile = false;
+    onMounted(() => {
+      isMobile.value = window.innerWidth <= 960;
+      window.addEventListener('resize', handleResize);
+    })
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', handleResize);
+    })
+
         
   </script>
   
@@ -98,7 +112,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding-right: 1.5em;
-    padding-left: 6em;
+    padding-left: 2em;
     align-items: center;
     height: 90px;
     background-color: rgba(255, 255, 255, 0.7);

@@ -44,7 +44,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: end;
-            height: 100vh;
+            height: auto;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/warf.jpg');
             background-size: cover;
             background-position-y: center;
@@ -52,11 +52,13 @@
         }
         
         .hero-content {
+            height: auto;
+            padding-top: 18em;
             max-width: 60%;
             text-align: left;
             color: #fff;
             z-index: 1;
-            margin-bottom: 15em;
+            margin-bottom: 18em;
             margin-left: 6em;
         }
         
@@ -88,5 +90,23 @@
             background-color: #3FB65D;
             color: #fff;
         }
+
+        @media screen and (max-width: 960px) {
+            .hero-content {
+                margin-left: 2em;
+            }
+            .hero-content p{
+                font-size: 1.1em;
+            }
+            .hero-content h1{
+                font-size: 2em;
+            }
+
+            .hero-content a {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            }
+        }
+
   </style>
   

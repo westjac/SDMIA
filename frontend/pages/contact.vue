@@ -1,7 +1,7 @@
 <template>
     <div>
     <PageHeader 
-    imageSrc="/images/warf.jpg"
+    imageSrc="/images/annualmeeting2022.jpg"
     title="Contact SDMIA" 
     />
     <div class="dividerBar"></div>
