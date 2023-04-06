@@ -1,4 +1,5 @@
 <template>
+  <!-- START OF DESKTOP NAVIGATION MENU -->
     <nav v-show="!isMobile" class="top-nav">
       <v-container>
         <v-row align="center">
@@ -13,6 +14,8 @@
         </v-row>
       </v-container>
     </nav>
+
+    <!-- START OF MOBILE NAVIGATION MENU -->
     <nav v-show="isMobile" class="mobile">
       <a href="/">
         <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
@@ -94,10 +97,11 @@ a {
 .mobile {
     display: flex;
     justify-content: space-between;
-    padding: 0 1.5em;
+    padding-right: 1.5em;
+    padding-left: 6em;
     align-items: center;
     height: 90px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: 1; /* set a higher z-index value for the nav */
     position: relative; /* set position to relative */
 }

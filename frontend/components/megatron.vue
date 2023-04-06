@@ -1,8 +1,5 @@
 <template>
     <div class="hero-container">
-      <div class="hero-image">
-        <img :src="imageSrc" :alt="imageAlt" />
-      </div>
       <div class="hero-content">
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
@@ -46,32 +43,21 @@
     .hero-container {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
+            align-items: end;
             height: 100vh;
-        }
-        
-        .hero-image {
-            flex: 1 1 100%;
-            height: 100%;
-            filter: brightness(70%)
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/warf.jpg');
+            background-size: cover;
+            background-position-y: center;
+            background-position-x: center;
         }
         
         .hero-content {
-            position: absolute;
-            top: 20em;
-            left: 6em;
-            max-width: 80%;
-            padding: 0 2rem;
+            max-width: 60%;
             text-align: left;
             color: #fff;
             z-index: 1;
+            margin-bottom: 15em;
+            margin-left: 6em;
         }
         
         .hero-content h1 {

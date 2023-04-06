@@ -5,55 +5,64 @@
     title="About SDMIA" 
     />
     <div class="dividerBar"></div>
-    <h1>Our Mission</h1>
-    <p>Provide A Unified Voice to Educate, Communicate and Advocate for the Mineral Industries in South Dakota.</p>
+    <div class="content">
+      <div class="mission">
+        <h1>Our Mission</h1>
+        <p>Provide A Unified Voice to Educate, Communicate and Advocate for the Mineral Industries in South Dakota.</p>
+      </div>
+      <div class="vision">
+        <h1>Our Vision</h1>
+        <p>To honor South Dakota’s world class mining heritage and its natural resource partners by:</p>
+        <br />
+        <ul style="list-style-type:circle;">
+          <li>Developing safe, sustainable, and responsible mineral resources.</li>
+          <li>Educating, advocating, and collaborating with educators, local communities, policy makers and members of the public.</li>
+          <li>Recognizing the importance and benefit of responsible natural resource development and use.</li>
+          <li>Sustaining and improving the quality of life for South Dakotans for generations to come.</li>
+        </ul>
+      </div>
 
-    <h1>Our Vision</h1>
-    <p>To honor South Dakota’s world class mining heritage and its natural resource partners by:</p>
-    <ul style="list-style-type:circle;">
-      <li>Developing safe, sustainable, and responsible mineral resources.</li>
-      <li>Educating, advocating, and collaborating with educators, local communities, policy makers and members of the public.</li>
-      <li>Recognizing the importance and benefit of responsible natural resource development and use.</li>
-      <li>Sustaining and improving the quality of life for South Dakotans for generations to come.</li>
-    </ul>
-    
-    <h1>Board of Directors</h1>
-    <v-container fluid>
-    <v-row class="justify-center">
-      <v-col
-        v-for="(item, index) in boardOfDirectors"
-        :key="index"
-        cols="12"
-        md="4"
-        class="d-flex justify-center"
-      >
-        <div class="text-center">
-          <h2>{{ item.name }}</h2>
-          <p>{{ item.company }}</p>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
-
-  <h1>Members</h1>
-  <v-container fluid>
-    <v-row class="justify-center">
-      <v-col
-        v-for="(item, index) in members"
-        :key="index"
-        cols="12"
-        md="4"
-        class="d-flex justify-center"
-      >
-        <div class="text-center">
-          <img :src="item.logo" alt="Company logo" class="logo">
-          <p>{{ item.name }}</p>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
-
+      <div class="directors">
+        <h1>Board of Directors</h1>
+        <v-container fluid>
+          <v-row class="justify-center">
+            <v-col
+              v-for="(item, index) in boardOfDirectors"
+              :key="index"
+              cols="12"
+              md="4"
+              class="d-flex justify-center"
+            >
+              <div class="text-center">
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.company }}</p>
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+      
+      <div class="members">
+        <h1>Members</h1>
+        <v-container fluid>
+          <v-row class="justify-center">
+            <v-col
+              v-for="(item, index) in members"
+              :key="index"
+              cols="12"
+              md="4"
+              class="d-flex justify-center"
+            >
+              <div class="text-center">
+                <img :src="item.logo" alt="Company logo" class="logo">
+                <p>{{ item.name }}</p>
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -90,6 +99,54 @@
     background-color: #123C62; 
     height: 60px;
   }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6em;
+  }
+
+  .mission {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .mission p {
+    font-size: 1.1em;
+    }
+
+    .vision {
+      max-width: 650px;
+    }
+
+    .vision p, ul {
+      font-size: 1.1em;
+    }
+
+    .vision ul {
+      padding-left: 2em;
+    }
+
+  .directors {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .directors p {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  .members .logo {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .members p {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
   h1 {
         text-align: center;
         color: #123C62;
@@ -101,10 +158,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-  }
-
-  .v-col {
-    padding: 0;
   }
 
   .text-center {
@@ -123,18 +176,7 @@
     color: #123C62;
   }
 
-  p {
-    margin: 0;
-    font-size: 16px;
-  }
-    /* Set max-width for the container */
-    .v-container {
-    max-width: 700px;
-    margin: 0 auto; /* Center the container horizontally */
-  }
 
-  .logo {
-    max-width: 80px;
-    max-height: 80px;
-  }
+
+
 </style>
