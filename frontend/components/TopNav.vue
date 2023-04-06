@@ -8,25 +8,16 @@
           </a>
             <div class="links">
             <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
-            <v-icon icon="mdi-vuetify"></v-icon>
           </div>
           </v-col>
         </v-row>
       </v-container>
     </nav>
-    <nav class="top-nav">
-      <v-container>
-        <v-row align="center">
-          <v-col>
-          <a href="/">
-            <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
-          </a>
-            <div class="links">
-            <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
-          </div>
-          </v-col>
-        </v-row>
-      </v-container>
+    <nav v-show="isMobile" class="mobile">
+      <a href="/">
+        <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
+      </a>
+      <v-icon icon="mdi-menu" size="x-large" color="#123C62"/>
     </nav>
   </template>
   
@@ -50,7 +41,7 @@
           },
         ]
 
-        const isMobile = ref(false);
+        const isMobile = true;
         
   </script>
   
@@ -98,6 +89,17 @@
 
 a {
   text-decoration: none;
+}
+
+.mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    align-items: center;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1; /* set a higher z-index value for the nav */
+    position: relative; /* set position to relative */
 }
   </style>
   
