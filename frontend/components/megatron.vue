@@ -57,7 +57,6 @@
             max-width: 60%;
             text-align: left;
             color: #fff;
-            z-index: 1;
             margin-bottom: 16em;
             margin-left: 6em;
         }

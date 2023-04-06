@@ -1,6 +1,6 @@
 <template>
   <!-- START OF DESKTOP NAVIGATION MENU -->
-    <nav v-show="!isMobile" class="top-nav">
+    <nav v-if="!isMobile" class="top-nav">
       <v-container>
         <v-row align="center">
           <v-col>
@@ -16,16 +16,27 @@
     </nav>
 
     <!-- START OF MOBILE NAVIGATION MENU -->
-    <nav v-show="isMobile" class="mobile">
-      <a href="/">
-        <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
-      </a>
-      <v-icon icon="mdi-menu" size="x-large" color="#123C62"/>
-    </nav>
+    <div v-if="isMobile" class="mobile-nav">
+      <nav class="mobile">
+        <a href="/">
+          <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
+        </a>
+        <v-icon @click="toggleMobileNav" icon="mdi-menu" size="x-large" color="#123C62" :class="{'icon-active' : mobileNav}"/>
+      </nav>
+      <transition>
+        <div v-show="mobileNav" class="dropdownNavigation">
+          <a href="/">Home</a>
+          <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
+        </div>
+      </transition>
+    </div>
+
   </template>
   
   <script setup>
     const isMobile = ref(false);
+    const scrollPosition = ref(null);
+    const mobileNav = ref(null);
     let links = [
       {
         label: 'Mining in SD',
@@ -44,6 +55,10 @@
         slug: '/contact'
       },
     ]
+
+    function toggleMobileNav() {
+      mobileNav.value = !mobileNav.value
+    }
     
     //RESPONSIVE MENU FUNCTIONS
     function handleResize() {
@@ -118,7 +133,53 @@ a {
     height: 90px;
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 1; /* set a higher z-index value for the nav */
-    position: relative; /* set position to relative */
+}
+
+.mobile-nav {
+  z-index: 1;
+
+}
+
+.dropdownNavigation {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  padding-top: 1em;
+}
+
+.dropdownNavigation a{
+    color: #000;
+    padding: 6px;
+}
+
+.dropdownNavigation a{
+    font-weight: bold;
+    color: #123C62; /* dark blue */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* slight drop shadow */
+    transition: all 0.3s ease-in-out; /* smooth transition when hovered over */
+    font-size: large;
+  }
+
+  .dropdownNavigation a:hover {
+    color: #34495e; /* slightly lighter blue */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* stronger drop shadow */
+    transform: translateY(-2px); /* slight upward movement */
+  }
+
+  .dropdownNavigation a:visited {
+    font-weight: bold;
+    color: #123C62; /* dark blue */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* slight drop shadow */
+    transition: all 0.3s ease-in-out; /* smooth transition when hovered over */
+    text-decoration: none;
 }
   </style>
   
