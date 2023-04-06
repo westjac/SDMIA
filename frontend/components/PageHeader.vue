@@ -1,11 +1,6 @@
 <template>
     <div class="page-header">
-      <div class="header-image">
-        <img :src="imageSrc" alt="Background image" />
-      </div>
-      <div class="header-content">
         <h1>{{ title }}</h1>
-      </div>
     </div>
   </template>
   
@@ -27,10 +22,13 @@
   <style scoped>
     .page-header {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
             justify-content: center;
+            align-items: end;
             height: 25em;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/warf.jpg');
+            background-size: cover;
+            background-position-y: center;
+            background-position-x: center;
         }
         
         .header-image {
@@ -39,25 +37,12 @@
             filter: brightness(60%)
         }
         
-        .header-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .header-content {
-            position: absolute;
-            top: 16em;
-            max-width: 80%;
-            text-align: left;
-            color: #fff;
-            z-index: 1;
-        }
-        
-        .header-content h1 {
+        .page-header h1 {
             font-size: 3rem;
             font-weight: bold;
             margin-bottom: 1rem;
+            color: #fff;
+            margin-bottom: 1.4em;
         }
   </style>
   
