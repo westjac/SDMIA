@@ -1,6 +1,14 @@
 <template>
     <h1>Featured News &amp; Resources</h1>
     <div class="articles">
+    <div>
+    </div>
+        <NewsCard
+        photo="/images/annualmeeting2022.jpg"
+        title="SAVE THE DATE: SDMIA Annual Meeting"
+        description="RSVP to join us for our annual meeting on May 18, 2023 "
+        link="#"
+        />
         <NewsCard
         photo="/images/warf.jpg"
         title="SDMIA 2022 Annual Meeting"
@@ -19,7 +27,8 @@
     }
     .articles {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         padding-bottom: 2em;
     }
 </style>
