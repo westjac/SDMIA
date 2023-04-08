@@ -26,7 +26,7 @@
       </nav>
       <transition>
         <div v-show="mobileNav" class="dropdownNavigation">
-          <a href="/">Home</a>
+          <!-- <a href="/">Home</a> -->
           <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
         </div>
       </transition>
@@ -40,12 +40,12 @@
     const mobileNav = ref(null);
     let links = [
       {
-        label: 'Mining in SD',
-        slug: '/mining-in-sd',
-      }, 
+        label: 'Home',
+        slug: '/'
+      },
       {
-        label: 'Resources',
-        slug: '/resources'
+        label: 'Education',
+        slug: '/education'
       },
       {
         label: 'About SDMIA',
