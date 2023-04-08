@@ -23,7 +23,7 @@
           </v-row>
         </template>
       </v-img>
-      <div style="text-align: center;">
+      <div style="text-align: center; margin-bottom: 1em;">
         <p style="color: #666666; font-size: 12px;">Image attribution: MEC Mineral Baby 2022</p>
       </div>
       <v-img
@@ -38,7 +38,7 @@
           </v-row>
         </template>
       </v-img>
-      <div style="text-align: center;">
+      <div style="text-align: center; margin-bottom: 1em;">
         <p style="color: #666666; font-size: 12px;">Image attribution: MEC Mineral World</p>
       </div>
     </div>
@@ -81,6 +81,15 @@
     }
 
     .MEC .v-img {
-      margin: 1em 0;
+      margin: 0em 0;
+    }
+
+    @media screen and (max-width: 960px) {
+      .weAreMiners {
+      margin: 0 2em;
+    }
+    .MEC {
+      margin: 0 2em;
+    }
     }
 </style>
