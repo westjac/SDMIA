@@ -68,29 +68,61 @@
 <script setup>
   let boardOfDirectors = [
     {
+      name: "Kwinn Neff",
+      company: "Agnico Eagle Mines Ltd."
+    },  
+    {
       name: "Liz Sailer",
       company: "Dakota Gold Corp."
     },
     {
-      name: "Kwinn Neff",
-      company: "Agnico Eagle Mines Ltd."
+      name: "Crystal Hocking",
+      company: "RESPEC Compnay LLC"
     },
-    { name: 'John Doe', company: 'ABC Inc.' },
-        { name: 'Jane Smith', company: 'XYZ Corp.' },
-        { name: 'Bob Johnson', company: 'DEF Co.' },
-        { name: 'Alice Williams', company: 'GHI Ltd.' },
-        { name: 'Tom Brown', company: 'JKL LLC' },
-        { name: 'Sue Davis', company: 'MNO LLC' },
+    {
+      name: "Mark Bowron",
+      company: "South Dakota Mines"
+    },
+    {
+      name: "Brian Tideman",
+      company: "Pete Lien & Sons"
+    },
+    {
+      name: "Mike Cepak P.E.",
+      company: "Retired"
+    },
+    {
+      name: "Tony Auld",
+      company: "Coeur Wharf"
+    },
+    {
+      name: "Kathy Johnson PhD.",
+      company: "Barr Engineering Co."
+    },
+    {
+      name: "Dean Aurand",
+      company: "Mid Continent Testing Labs, Inc."
+    },
+    {
+      name: "Larry Mann",
+      company: "Mann Strategies"
+    },
+    {
+      name: "Alexandra Gregor",
+      company: "Managing Director"
+    },
   ]
 
   let members = [
-    { name: 'John Doe', company: 'ABC Inc.', logo: 'https://via.placeholder.com/80x80' },
-        { name: 'Jane Smith', company: 'XYZ Corp.', logo: 'https://via.placeholder.com/80x120' },
-        { name: 'Bob Johnson', company: 'DEF Co.', logo: 'https://via.placeholder.com/80x80' },
-        { name: 'Alice Williams', company: 'GHI Ltd.', logo: 'https://via.placeholder.com/800x80' },
-        { name: 'Tom Brown', company: 'JKL LLC', logo: 'https://via.placeholder.com/80x80' },
-        { name: 'Sue Davis', company: 'MNO LLC', logo: 'https://via.placeholder.com/80x80' },
-    
+    { name: 'Dakota Gold Corp.', logo: '/images/logos/dakotagold.png' },
+    { name: 'Agnico Eagle Mines Ltd.', logo: '/images/logos/agnicoeagle.png' },
+    { name: 'RESPEC Company LLC', logo: '/images/logos/respec.png' },
+    { name: 'South Dakota Mines', logo: '/images/logos/sdm.png' },
+    { name: 'Pete Lien & Sons', logo: '/images/logos/petelien.jpg' },
+    { name: 'South Dakota DANR', logo: '/images/logos/sddanr.png' },
+    { name: 'Coeur Wharf', logo: '/images/logos/wharf.png' },
+    { name: 'Barr Engineering Co.', logo: '/images/logos/barr.png' },
+    { name: 'Mid Continent Testing Labs, Inc.', logo: '/images/logos/midcontinent.svg' },
   ]
 </script>
 
@@ -138,8 +170,9 @@
   }
 
   .members .logo {
-    max-width: 80px;
-    max-height: 80px;
+    max-height: 100px;
+    object-fit: contain;
+    padding-bottom: 0.5em;
   }
 
   .members p {
@@ -176,7 +209,11 @@
     color: #123C62;
   }
 
-
+  @media screen and (max-width: 960px) {
+  .content {
+    padding: 0 2em;
+  }
+}
 
 
 </style>
