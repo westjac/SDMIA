@@ -65,7 +65,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 6em;
+      padding: 0 6em;
       padding-bottom: 1em;
     }
 
@@ -77,19 +77,20 @@
     .MEC {
       display: flex;
       flex-direction: column;
-      margin: 0 6em;
+      padding: 0 6em;
     }
 
-    .MEC .v-img {
-      margin: 0em 0;
+    img {
+      max-width: 960px;
+      height: 100%;
     }
 
     @media screen and (max-width: 960px) {
       .weAreMiners {
-      margin: 0 2em;
+      padding: 0 2em;
     }
     .MEC {
-      margin: 0 2em;
+      padding: 0 2em;
     }
     }
 </style>
