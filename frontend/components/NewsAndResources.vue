@@ -5,8 +5,8 @@
     </div>
         <NewsCard
         photo="/images/annualmeeting2022.jpg"
-        title="SAVE THE DATE: SDMIA Annual Meeting"
-        description="RSVP to join us for our annual meeting on May 18, 2023 "
+        title="SAVE THE DATE: SDMIA Annual Dinner"
+        description="RSVP to join us for our annual meeting on May 19, 2023"
         link="#"
         />
         <NewsCard

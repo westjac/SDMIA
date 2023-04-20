@@ -108,7 +108,7 @@
       company: "Mann Strategies"
     },
     {
-      name: "Alexandra Gregor",
+      name: "Vacant",
       company: "Managing Director"
     },
   ]

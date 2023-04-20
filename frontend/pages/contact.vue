@@ -20,7 +20,7 @@
             <p><strong>President</strong></p>
             <p>president@sdmineralindustries.org</p>
             <br/>
-            <p>Alexandra Gregor</p>
+            <p>Vacant</p>
             <p><strong>Managing Director</strong></p>
             <p>director@sdmineralindustries.org</p>
         </div>
