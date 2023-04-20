@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "WelcomeText": {
+      "type": "string",
+      "required": true
+    },
+    "Subtext": {
+      "type": "text",
+      "required": true
+    },
+    "ActionButtonURL": {
+      "type": "string",
+      "required": true
+    },
+    "ActionButtonLabel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
