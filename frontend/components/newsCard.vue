@@ -115,8 +115,8 @@
   }
 
   .OreShapeMask {
-    -webkit-mask-image: url("/images/oreShape.png");
-  mask-image: url("/images/oreShape.png");
+    -webkit-mask-image: url("/images/OreShape.png");
+  mask-image: url("/images/OreShape.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
