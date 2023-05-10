@@ -1,5 +1,5 @@
 <template>
-    <div class="article-card">
+    <div class="article-card" :class="layoutAlternator">
       <div class="article-card__image-wrapper">
         <img :src="photo" alt="" class="article-card__image OreShapeMask" />
       </div>
@@ -30,8 +30,25 @@
         type: String,
         required: true,
       },
+      index: {
+        type: Number,
+        required: false,
+      },
     },
-  };
+    computed: {
+      layoutAlternator() {
+        if(this.index % 2 == 1){
+          return "rowDir"
+        }else if(this.index % 2 == 0){
+          return "rowReverseDir"
+        }else{
+          return "rowDir"
+        }  
+      }
+    }
+  }
+  
+
   </script>
   
   <style scoped>
@@ -42,9 +59,16 @@
     border-radius: 4px;
 
     background-color: #fff;
-    max-width: 50%;
+    width: 40vw;
+  }
+
+  .rowDir {
+    flex-direction: row;
   }
   
+  .rowReverseDir {
+    flex-direction: row-reverse;
+  }
   .article-card__image-wrapper {
     flex-shrink: 0;
     margin-right: 16px;
@@ -104,6 +128,7 @@
     .article-card {
     flex-direction: column;
     max-width: 100%;
+    width: 80vw;
   }
 
   .article-card__image-wrapper {

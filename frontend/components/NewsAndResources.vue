@@ -8,12 +8,14 @@
         title="SAVE THE DATE: SDMIA Annual Dinner"
         description="RSVP to join us for our annual meeting on May 19, 2023"
         link="#"
+        :index=1
         />
         <NewsCard
         photo="/images/warf.jpg"
         title="SDMIA 2022 Annual Meeting"
         description="View our presentation from our annual meeting held in December 2022."
         link="/docs/SME_Meeting_092923.pdf"
+        :index=2
         />
     </div>
 </template>
