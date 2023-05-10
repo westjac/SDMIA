@@ -11,11 +11,18 @@
         :index=1
         />
         <NewsCard
+        photo="/images/cat.jpg"
+        title="SDMIA Membership Form"
+        description="Use this form to become a member of the SDMIA."
+        link="/docs/MembershipForm.pdf"
+        :index=2
+        />
+        <NewsCard
         photo="/images/warf.jpg"
         title="SDMIA 2022 Annual Meeting"
         description="View our presentation from our annual meeting held in December 2022."
         link="/docs/SME_Meeting_092923.pdf"
-        :index=2
+        :index=3
         />
     </div>
 </template>

@@ -25,8 +25,24 @@
             <p>director@sdmineralindustries.org</p>
         </div>
     </div>
+    <div class="contactForm">
+      
+    <iframe
+      id="JotFormIFrame-231290747375057"
+      title="SDMIA Contact Form"
+      allowtransparency="true"
+      allowfullscreen="true"
+      allow="geolocation;"
+      src="https://form.jotform.com/231290747375057"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:1000px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    </div>
     </div>
 </template>
+
 
 <style scoped>
   .dividerBar {
@@ -62,6 +78,10 @@
     color: #123C62;
     width: 370px;
     height: auto;
+  }
+
+  .formFooter {
+    opacity: 0 !important;
   }
 
   @media screen and (max-width: 960px) {
