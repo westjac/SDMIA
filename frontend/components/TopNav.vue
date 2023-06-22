@@ -52,6 +52,10 @@
         slug: '/about'
       },
       {
+        label: 'Events',
+        slug: '/events'
+      },
+      {
         label: 'Contact',
         slug: '/contact'
       },
