@@ -3,7 +3,7 @@
       <div class="hero-content">
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
-        <a target="_blank" :href="buttonLink">{{ buttonText }}</a>
+        <a target="" :href="buttonLink">{{ buttonText }}</a>
       </div>
     </div>
   </template>

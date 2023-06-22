@@ -13,7 +13,7 @@
       title="Welcome to the South Dakota Mineral Industries Association"
       description="Since 2022, the South Dakota Mineral Industries Association (SDMIA) has been the state and national voice of the South Dakota mining industry. Working alongside our members, SDMIA promotes the industry across the region and nationally."
       buttonText="More About SDMIA >"
-      buttonLink="/docs/SME_Meeting_092923.pdf"
+      buttonLink="/about"
     />
     <div class="dividerBar"></div>
     <NewsAndResources />

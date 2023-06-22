@@ -3,13 +3,13 @@
     <div class="articles">
     <div>
     </div>
-        <NewsCard
+        <!-- <NewsCard
         photo="/images/annualmeeting2022.jpg"
         title="SAVE THE DATE: SDMIA Annual Dinner"
         description="RSVP to join us for our annual meeting on May 19, 2023"
         link="#"
         :index=1
-        />
+        /> -->
         <NewsCard
         photo="/images/cat.jpg"
         title="SDMIA Membership Form"
