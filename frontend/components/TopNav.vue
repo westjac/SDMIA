@@ -8,7 +8,21 @@
             <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
           </a>
             <div class="links">
-            <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
+            <a v-for="(link, index) in links" :key="index" :href="link.slug"
+            @mouseover="openDropdown(index)"
+            @mouseleave="closeDropdown(index)">
+            {{ link.label }}
+            <!-- <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+              <a
+                v-for="(submenuItem, submenuIndex) in link.submenu"
+                :key="submenuIndex"
+                :href="submenuItem.slug"
+                class="submenu-item"
+              >
+                {{ submenuItem.label }}
+              </a>
+            </div> -->
+            </a>
           </div>
           </v-col>
         </v-row>
@@ -27,7 +41,19 @@
       <transition>
         <div v-show="mobileNav" class="dropdownNavigation">
           <!-- <a href="/">Home</a> -->
-          <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
+          <a v-for="(link, index) in links" :key="index" :href="link.slug">
+          {{ link.label }}
+          <!-- <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+              <a
+                v-for="(submenuItem, submenuIndex) in link.submenu"
+                :key="submenuIndex"
+                :href="submenuItem.slug"
+                class="submenu-item"
+              >
+                {{ submenuItem.label }}
+              </a>
+            </div> -->
+          </a>
         </div>
       </transition>
     </div>
@@ -38,14 +64,21 @@
     const isMobile = ref(false);
     const scrollPosition = ref(null);
     const mobileNav = ref(null);
-    let links = [
+    const links = ref(null);
+
+    links.value = [
       {
         label: 'Home',
         slug: '/'
       },
       {
         label: 'Education',
-        slug: '/education'
+        slug: '/education',
+        submenu: [
+            { label: 'Programs', slug: '/education/programs' },
+            { label: 'Courses', slug: '/education/courses' },
+        ],
+        expanded: false,
       },
       {
         label: 'About SDMIA',
@@ -79,10 +112,55 @@
       window.removeEventListener('resize', handleResize);
     })
 
+    function openDropdown(index) {
+      links.value[index].expanded = true;
+    }
+
+    function closeDropdown(index) {
+      links.value[index].expanded = false;
+    }
+
         
   </script>
   
   <style scoped>
+
+  
+.dropdownNavigation .dropdown-toggle:after {
+  content: '\25B6';
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+  .top-nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  min-width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+  .top-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+  .top-nav .dropdown-menu .submenu-item {
+  display: block;
+  padding: 6px;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.top-nav .dropdown-menu .submenu-item:hover {
+  color: #34495e;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
   .top-nav {
     display: flex;
     align-items: center;

@@ -3,13 +3,13 @@
     <div class="articles">
     <div>
     </div>
-        <!-- <NewsCard
+        <NewsCard
         photo="/images/annualmeeting2022.jpg"
-        title="SAVE THE DATE: SDMIA Annual Dinner"
-        description="RSVP to join us for our annual meeting on May 19, 2023"
-        link="#"
+        title="SDMIA May 2023 Annual Meeting"
+        description="View our presentation from the May 2023 Annual meeting."
+        link="/docs/May2023AnnualMeeting.pdf"
         :index=1
-        /> -->
+        />
         <NewsCard
         photo="/images/cat.jpg"
         title="SDMIA Membership Form"
@@ -17,13 +17,13 @@
         link="/docs/MembershipForm.pdf"
         :index=2
         />
-        <NewsCard
+        <!-- <NewsCard
         photo="/images/warf.jpg"
         title="SDMIA 2022 Annual Meeting"
         description="View our presentation from our annual meeting held in December 2022."
         link="/docs/SME_Meeting_092923.pdf"
         :index=3
-        />
+        /> -->
     </div>
 </template>
 

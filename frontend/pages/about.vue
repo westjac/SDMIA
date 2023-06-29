@@ -34,6 +34,7 @@
               class="d-flex justify-center"
             >
               <div class="text-center">
+                <img :src="item.logo" alt="Company logo" class="logo">
                 <h2>{{ item.name }}</h2>
                 <p>{{ item.company }}</p>
               </div>
@@ -68,48 +69,54 @@
 <script setup>
   let boardOfDirectors = [
     {
-      name: "Kwinn Neff",
-      company: "Agnico Eagle Mines Ltd."
-    },  
-    {
       name: "Liz Sailer",
-      company: "Dakota Gold Corp."
+      company: "Dakota Gold Corp.",
+      logo: '/images/logos/dakotagold.png'
     },
     {
       name: "Crystal Hocking",
-      company: "RESPEC Compnay LLC"
+      company: "RESPEC Company LLC",
+      logo: '/images/logos/respec.png'
     },
     {
       name: "Mark Bowron",
-      company: "South Dakota Mines"
-    },
-    {
-      name: "Brian Tideman",
-      company: "Pete Lien & Sons"
+      company: "South Dakota Mines",
+      logo: '/images/logos/sdm.png'
     },
     {
       name: "Mike Cepak P.E.",
-      company: "Retired"
+      company: "Retired",
+      logo: '/images/sdmia.png'
     },
     {
       name: "Tony Auld",
-      company: "Coeur Wharf"
+      company: "Coeur Wharf",
+      logo: '/images/logos/wharf.png'
     },
     {
-      name: "Kathy Johnson PhD.",
-      company: "Barr Engineering Co."
+      name: "Jake Hepp",
+      company: "Simon",
+      logo: '/images/logos/simon.png'
     },
     {
       name: "Dean Aurand",
-      company: "Mid Continent Testing Labs, Inc."
+      company: "Mid Continent Testing Labs",
+      logo: '/images/logos/midcontinent.svg'
     },
     {
-      name: "Larry Mann",
-      company: "Mann Strategies"
+      name: "Beau Riopel",
+      company: "Butler Machinery Company",
+      logo: '/images/logos/butler.png'
     },
     {
-      name: "Vacant",
-      company: "Managing Director"
+      name: "Danielle Wiebers",
+      company: "Pete Lien & Sons",
+      logo: '/images/logos/petelien.jpg'
+    },
+    {
+      name: "Kwinn Neff",
+      company: "Managing Director",
+      logo: '/images/sdmia.png'
     },
   ]
 
@@ -119,10 +126,23 @@
     { name: 'RESPEC Company LLC', logo: '/images/logos/respec.png' },
     { name: 'South Dakota Mines', logo: '/images/logos/sdm.png' },
     { name: 'Pete Lien & Sons', logo: '/images/logos/petelien.jpg' },
-    { name: 'South Dakota DANR', logo: '/images/logos/sddanr.png' },
     { name: 'Coeur Wharf', logo: '/images/logos/wharf.png' },
     { name: 'Barr Engineering Co.', logo: '/images/logos/barr.png' },
     { name: 'Mid Continent Testing Labs, Inc.', logo: '/images/logos/midcontinent.svg' },
+    { name: 'EnCore Energy', logo: '/images/logos/encore.png' },
+    { name: 'Barrick', logo: '/images/sdmia.png' },
+    { name: 'Midwest Lithium', logo: '/images/sdmia.png' },
+    { name: 'Solitario Zinc', logo: '/images/sdmia.png' },
+    { name: 'Morris, Inc.', logo: '/images/sdmia.png' },
+    { name: 'Black Hills Mining Museum', logo: '/images/sdmia.png' },
+    { name: 'Gochnour & Associates', logo: '/images/sdmia.png' },
+    { name: 'Greystone Company', logo: '/images/sdmia.png' },
+    { name: 'Simon', logo: '/images/logos/simon.png' },
+    { name: 'Mann Strategies', logo: '/images/sdmia.png' },
+    { name: 'Stone Land Service', logo: '/images/sdmia.png' },
+    { name: 'Bennett Main Gubbrud & Willert PC', logo: '/images/sdmia.png' },
+    { name: 'Butler Machinery', logo: '/images/logos/butler.png' },
+    { name: 'Caterpillar, Inc.', logo: '/images/sdmia.png' },
   ]
 </script>
 
@@ -175,9 +195,17 @@
     padding-bottom: 0.5em;
   }
 
+  .directors .logo {
+    max-height: 100px;
+    object-fit: contain;
+    padding-bottom: 0.5em;
+  }
   .members p {
     font-size: 0.8em;
     font-weight: bold;
+  }
+  .members {
+    max-width: 1000px;
   }
 
   h1 {
