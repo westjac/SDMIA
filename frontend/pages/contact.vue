@@ -17,12 +17,12 @@
             <br/>
             <h2>Email</h2>
             <p>Kwinn Neff</p>
-            <p><strong>President</strong></p>
+            <p><strong>President & Managing Director</strong></p>
             <p>president@sdmineralindustries.org</p>
             <br/>
-            <p>Vacant</p>
-            <p><strong>Managing Director</strong></p>
-            <p>director@sdmineralindustries.org</p>
+            <p>Elizabeth Sailer</p>
+            <p><strong>Board Chair</strong></p>
+            <p>esailer@sdmineralindustries.org</p>
         </div>
     </div>
     <div class="contactForm">

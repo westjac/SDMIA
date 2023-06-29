@@ -41,7 +41,19 @@
       <transition>
         <div v-show="mobileNav" class="dropdownNavigation">
           <!-- <a href="/">Home</a> -->
-          <a v-for="(link, index) in links" :key="index" :href="link.slug">{{ link.label }}</a>
+          <a v-for="(link, index) in links" :key="index" :href="link.slug">
+          {{ link.label }}
+          <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+              <a
+                v-for="(submenuItem, submenuIndex) in link.submenu"
+                :key="submenuIndex"
+                :href="submenuItem.slug"
+                class="submenu-item"
+              >
+                {{ submenuItem.label }}
+              </a>
+            </div>
+          </a>
         </div>
       </transition>
     </div>
@@ -112,6 +124,14 @@
   </script>
   
   <style scoped>
+
+  
+.dropdownNavigation .dropdown-toggle:after {
+  content: '\25B6';
+  margin-left: 5px;
+  cursor: pointer;
+}
+
   .top-nav .dropdown-menu {
   position: absolute;
   top: 100%;

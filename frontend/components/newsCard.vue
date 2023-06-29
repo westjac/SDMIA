@@ -6,7 +6,7 @@
       <div class="article-card__content">
         <h3 class="article-card__title">{{ title }}</h3>
         <p class="article-card__description">{{ description }}</p>
-        <a :href="link" class="article-card__link">Read more ></a>
+        <a target="_blank" :href="link" class="article-card__link">Read more ></a>
       </div>
     </div>
   </template>
@@ -57,6 +57,7 @@
     align-items: center;
     padding: 16px;
     border-radius: 4px;
+    max-width: 600px;
 
     background-color: #fff;
     width: 40vw;
@@ -68,6 +69,7 @@
   
   .rowReverseDir {
     flex-direction: row-reverse;
+    
   }
   .article-card__image-wrapper {
     flex-shrink: 0;
