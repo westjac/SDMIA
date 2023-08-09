@@ -12,7 +12,7 @@
             @mouseover="openDropdown(index)"
             @mouseleave="closeDropdown(index)">
             {{ link.label }}
-            <!-- <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+            <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
@@ -21,7 +21,7 @@
               >
                 {{ submenuItem.label }}
               </a>
-            </div> -->
+            </div>
             </a>
           </div>
           </v-col>
@@ -43,7 +43,7 @@
           <!-- <a href="/">Home</a> -->
           <a v-for="(link, index) in links" :key="index" :href="link.slug">
           {{ link.label }}
-          <!-- <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+          <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
@@ -52,7 +52,7 @@
               >
                 {{ submenuItem.label }}
               </a>
-            </div> -->
+            </div>
           </a>
         </div>
       </transition>

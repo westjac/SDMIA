@@ -3,7 +3,7 @@
     <div class="footer-left">
       <img src="/images/sdmia-white-square.png" alt="Logo" class="logo" />
       <div class="contact-info">
-        <p class="address">244 E St. Joseph St.</p>
+        <p class="address">224 E St. Joseph St.</p>
         <p class="address">Rapid City, SD 57701</p>
         <p class="email"><strong>info@sdmineralindustries.org</strong></p>
       </div>

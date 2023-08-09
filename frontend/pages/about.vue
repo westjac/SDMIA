@@ -114,6 +114,11 @@
       logo: '/images/logos/petelien.jpg'
     },
     {
+      name: "Jason Combs",
+      company: "National Security Innovation Network",
+      logo: '/images/logos/NSIN.png'
+    },
+    {
       name: "Kwinn Neff",
       company: "Managing Director",
       logo: '/images/sdmia.png'
