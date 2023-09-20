@@ -75,8 +75,11 @@
         label: 'Education',
         slug: '/education',
         submenu: [
-            { label: 'Programs', slug: '/education/programs' },
-            { label: 'Courses', slug: '/education/courses' },
+            { label: 'Critical Minerals', slug: '/education/SDCriticalMinerals' },
+            { label: 'Early History', slug: '/education/EarlyMining' },
+            { label: 'Homestake', slug: '/education/Homestake' },
+            { label: 'Richmond Hill', slug: '/education/RichmondHill' },
+            { label: 'Maitland', slug: '/education/Maitland' },
         ],
         expanded: false,
       },
