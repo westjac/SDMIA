@@ -119,6 +119,11 @@
       logo: '/images/logos/NSIN.png'
     },
     {
+      name: "Jon Winter",
+      company: "EnCore Energy",
+      logo: '/images/logos/encore.png'
+    },
+    {
       name: "Kwinn Neff",
       company: "Managing Director",
       logo: '/images/sdmia.png'
@@ -135,19 +140,19 @@
     { name: 'Barr Engineering Co.', logo: '/images/logos/barr.png' },
     { name: 'Mid Continent Testing Labs, Inc.', logo: '/images/logos/midcontinent.svg' },
     { name: 'EnCore Energy', logo: '/images/logos/encore.png' },
-    { name: 'Barrick', logo: '/images/sdmia.png' },
-    { name: 'Midwest Lithium', logo: '/images/sdmia.png' },
-    { name: 'Solitario Zinc', logo: '/images/sdmia.png' },
-    { name: 'Morris, Inc.', logo: '/images/sdmia.png' },
-    { name: 'Black Hills Mining Museum', logo: '/images/sdmia.png' },
-    { name: 'Gochnour & Associates', logo: '/images/sdmia.png' },
+    { name: 'Barrick', logo: '/images/logos/barrick.png' },
+    { name: 'Midwest Lithium', logo: '/images/logos/midwestlithium.png' },
+    { name: 'Solitario Zinc', logo: '/images/logos/solitario.jpg' },
+    { name: 'Morris, Inc.', logo: '/images/logos/morris.jpg' },
+    { name: 'Black Hills Mining Museum', logo: '/images/logos/bhmm.png' },
+    { name: 'Gochnour & Associates', logo: '/images/logos/gochnour.jpg' },
     { name: 'Greystone Company', logo: '/images/sdmia.png' },
     { name: 'Simon', logo: '/images/logos/simon.png' },
     { name: 'Mann Strategies', logo: '/images/sdmia.png' },
     { name: 'Stone Land Service', logo: '/images/sdmia.png' },
     { name: 'Bennett Main Gubbrud & Willert PC', logo: '/images/sdmia.png' },
     { name: 'Butler Machinery', logo: '/images/logos/butler.png' },
-    { name: 'Caterpillar, Inc.', logo: '/images/sdmia.png' },
+    { name: 'Caterpillar, Inc.', logo: '/images/logos/cat.png' },
   ]
 </script>
 
