@@ -12,7 +12,7 @@
             @mouseover="openDropdown(index)"
             @mouseleave="closeDropdown(index)">
             {{ link.label }}
-            <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+            <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
@@ -39,11 +39,12 @@
         <v-icon @click="toggleMobileNav" icon="mdi-menu" size="x-large" color="#123C62" :class="{'icon-active' : mobileNav}"/>
       </nav>
       <transition>
-        <div v-show="mobileNav" class="dropdownNavigation">
-          <!-- <a href="/">Home</a> -->
+        <div v-if="mobileNav" class="dropdownNavigation">
           <a v-for="(link, index) in links" :key="index" :href="link.slug">
-          {{ link.label }}
-          <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu">
+            {{ link.label }}
+            <span v-if="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
+            <span v-if="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
+            <div v-if="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
@@ -63,17 +64,21 @@
   <script setup>
     const isMobile = ref(false);
     const scrollPosition = ref(null);
-    const mobileNav = ref(null);
+    const mobileNav = ref(false);
     const links = ref(null);
 
     links.value = [
       {
         label: 'Home',
-        slug: '/'
+        slug: '/',
+        expanded: false,
+        submenu: [
+        ],
       },
       {
         label: 'Education',
         slug: '/education',
+        expanded: false,
         submenu: [
             { label: 'Critical Minerals', slug: '/education/SDCriticalMinerals' },
             { label: 'Early History', slug: '/education/EarlyMining' },
@@ -81,24 +86,43 @@
             { label: 'Richmond Hill', slug: '/education/RichmondHill' },
             { label: 'Maitland', slug: '/education/Maitland' },
         ],
-        expanded: false,
       },
       {
         label: 'About SDMIA',
-        slug: '/about'
+        slug: '/about',
+        expanded: false,
+        submenu: [
+        ],
       },
       {
         label: 'Events',
-        slug: '/events'
+        slug: '/events',
+        expanded: false,
+        submenu: [
+        ],
       },
       {
         label: 'Contact',
-        slug: '/contact'
+        slug: '/contact',
+        expanded: false,
+        submenu: [
+        ],
       },
     ]
 
     function toggleMobileNav() {
       mobileNav.value = !mobileNav.value
+    }
+
+    function toggleSubMenu(link) {
+      link.expanded = !link.expanded;
+    }
+
+    // Toggle submenu when clicking the arrow
+    function toggleSubMenuArrow(link, event) {
+      event.stopPropagation(); // Prevent the link click event from firing
+      console.log('Clicked arrow for:', link.label); // Add this line for debugging
+      toggleSubMenu(link);
     }
     
     //RESPONSIVE MENU FUNCTIONS
@@ -163,6 +187,46 @@
   color: #34495e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+}
+
+.dropdown-menu-mobile {
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.dropdown-menu-mobile {
+  display: none;
+  opacity: 0;
+}
+
+/* Apply the fade-in animation */
+.dropdown-menu-mobile.fade-in {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+}
+
+/* Apply the fade-in animation */
+.dropdown-menu.fade-in {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
   .top-nav {
     display: flex;
