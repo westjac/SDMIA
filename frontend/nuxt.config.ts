@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         }
     },
     css: ['vuetify/styles'], // vuetify ships precompiled css, no need to import sass
+    pages: true,
     vite: {
         // @ts-ignore
         // curently this will lead to a type error, but hopefully will be fixed soon #justBetaThings

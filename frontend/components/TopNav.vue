@@ -16,8 +16,10 @@
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex" 
+                class="submenu-item"
+                :href="submenuItem.slug"
               >
-                <NuxtLink class="submenu-item"  :to="submenuItem.slug">{{ submenuItem.label }}</NuxtLink>
+              {{ submenuItem.label }}
               </a>
             </div>
             </a>
@@ -46,8 +48,10 @@
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
+                class="submenu-item"
+                :href="submenuItem.slug"
               >
-              <NuxtLink class="submenu-item"  :to="submenuItem.slug">{{ submenuItem.label }}</NuxtLink>
+              {{ submenuItem.label }}
               </a>
             </div>
           </a>
@@ -172,7 +176,7 @@
 
   .top-nav .dropdown-menu .submenu-item {
   display: block;
-  padding: 0px 0px;
+  padding: 6px 0px;
   color: #000;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
