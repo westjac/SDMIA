@@ -15,11 +15,9 @@
             <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
-                :key="submenuIndex"
-                :href="submenuItem.slug"
-                class="submenu-item"
+                :key="submenuIndex" 
               >
-                {{ submenuItem.label }}
+                <NuxtLink class="submenu-item"  :to="submenuItem.slug">{{ submenuItem.label }}</NuxtLink>
               </a>
             </div>
             </a>
@@ -48,10 +46,8 @@
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
-                :href="submenuItem.slug"
-                class="submenu-item"
               >
-                {{ submenuItem.label }}
+              <NuxtLink class="submenu-item"  :to="submenuItem.slug">{{ submenuItem.label }}</NuxtLink>
               </a>
             </div>
           </a>
@@ -176,7 +172,7 @@
 
   .top-nav .dropdown-menu .submenu-item {
   display: block;
-  padding: 6px;
+  padding: 0px 0px;
   color: #000;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
