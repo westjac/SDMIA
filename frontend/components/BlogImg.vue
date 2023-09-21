@@ -34,7 +34,7 @@
   
   <style scoped>
     .container {
-        width: clamp(200px, 500px, 800px);
+        width: clamp(120px, 500px, 800px);
     }
   </style>
   

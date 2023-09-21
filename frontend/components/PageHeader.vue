@@ -33,6 +33,7 @@
             margin-bottom: 1rem;
             color: #fff;
             margin-bottom: 1.4em;
+            text-align: center;
         }
   </style>
   
