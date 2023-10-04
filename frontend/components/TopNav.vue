@@ -1,6 +1,6 @@
 <template>
   <!-- START OF DESKTOP NAVIGATION MENU -->
-    <nav v-if="!isMobile" class="top-nav">
+    <nav v-show="!isMobile" class="top-nav">
       <v-container>
         <v-row align="center">
           <v-col>
@@ -12,7 +12,7 @@
             @mouseover="openDropdown(index)"
             @mouseleave="closeDropdown(index)">
             {{ link.label }}
-            <div  v-if="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
+            <div  v-show="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex" 
@@ -30,8 +30,8 @@
     </nav>
 
     <!-- START OF MOBILE NAVIGATION MENU -->
-    <div v-if="isMobile" class="mobile-nav-space"></div>
-    <div v-if="isMobile" class="mobile-nav">
+    <div v-show="isMobile" class="mobile-nav-space"></div>
+    <div v-show="isMobile" class="mobile-nav">
       <nav class="mobile">
         <a href="/">
           <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
@@ -39,12 +39,12 @@
         <v-icon @click="toggleMobileNav" icon="mdi-menu" size="x-large" color="#123C62" :class="{'icon-active' : mobileNav}"/>
       </nav>
       <transition>
-        <div v-if="mobileNav" class="dropdownNavigation">
+        <div v-show="mobileNav" class="dropdownNavigation">
           <a v-for="(link, index) in links" :key="index" :href="link.slug">
             {{ link.label }}
-            <span v-if="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
-            <span v-if="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
-            <div v-if="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
+            <span v-show="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
+            <span v-show="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
+            <div v-show="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
               <a
                 v-for="(submenuItem, submenuIndex) in link.submenu"
                 :key="submenuIndex"
