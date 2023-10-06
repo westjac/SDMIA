@@ -28,7 +28,7 @@ const runtimeConfig = useRuntimeConfig()
 const apiBase = runtimeConfig.public.apiBase
 console.log("API Base URL: ", apiBase)
 //Fetch home page data
-const { data: homePage } = await useFetch(`${apiBase}/api/home-page`)
+// const { data: homePage } = await useFetch(`${apiBase}/api/home-page`)
 // END CMS ACCESS //
   
 </script>

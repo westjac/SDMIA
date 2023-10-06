@@ -8,15 +8,24 @@
             <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
           </nuxt-link>
           <div class="links">
-            <nuxt-link
-              v-for="(link, index) in links"
-              :key="index"
-              :to="link.slug"
+            <template v-for="(link, index) in links" :key="index">
+            <div
+              class="dropdown-alignment"
               @mouseover="openDropdown(index)"
               @mouseleave="closeDropdown(index)"
             >
-              {{ link.label }}
-              <div v-show="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
+              <nuxt-link
+                
+                :to="link.slug"
+
+              >
+                {{ link.label }}
+              </nuxt-link>
+              <div
+                v-if="link.expanded && link.submenu.length !== 0"
+                class="dropdown-menu"
+                :class="{ 'fade-in': link.expanded }"
+              >
                 <nuxt-link
                   v-for="(submenuItem, submenuIndex) in link.submenu"
                   :key="submenuIndex"
@@ -26,7 +35,8 @@
                   {{ submenuItem.label }}
                 </nuxt-link>
               </div>
-            </nuxt-link>
+            </div>
+            </template>
           </div>
         </v-col>
       </v-row>
@@ -44,15 +54,27 @@
     </nav>
     <transition>
       <div v-show="mobileNav" class="dropdownNavigation">
-        <nuxt-link
-          v-for="(link, index) in links"
-          :key="index"
-          :to="link.slug"
-        >
-          {{ link.label }}
-          <span v-show="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
-          <span v-show="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
-          <div v-show="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
+        <template v-for="(link, index) in links" :key="index">
+          <nuxt-link  :to="link.slug">
+            {{ link.label }}
+            <span
+              v-show="!link.expanded && link.submenu.length !== 0"
+              class="arrow"
+              :class="{ 'expanded': link.expanded }"
+              @click.stop.prevent="toggleSubMenuArrow(link, $event)"
+            >&#9654;</span>
+            <span
+              v-show="link.expanded && link.submenu.length !== 0"
+              class="arrow"
+              :class="{ 'expanded': link.expanded }"
+              @click.stop.prevent="toggleSubMenuArrow(link, $event)"
+            >&#9660;</span>
+          </nuxt-link>
+          <div
+            v-if="link.expanded"
+            class="dropdown-menu-mobile"
+            :class="{ 'fade-in': link.expanded }"
+          >
             <nuxt-link
               v-for="(submenuItem, submenuIndex) in link.submenu"
               :key="submenuIndex"
@@ -62,11 +84,12 @@
               {{ submenuItem.label }}
             </nuxt-link>
           </div>
-        </nuxt-link>
+        </template>
       </div>
     </transition>
   </div>
 </template>
+
   
   <script setup>
     const isMobile = ref(false);
@@ -164,6 +187,10 @@
   content: '\25B6';
   margin-left: 5px;
   cursor: pointer;
+}
+
+.dropdown-alignment {
+  position: relative;
 }
 
   .top-nav .dropdown-menu {
