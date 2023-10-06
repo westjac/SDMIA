@@ -43,7 +43,7 @@
     .hero-container {
             display: flex;
             flex-wrap: wrap;
-            align-items: end;
+            align-items: flex-end;
             height: auto;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/warf.jpg');
             background-size: cover;

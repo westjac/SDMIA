@@ -24,7 +24,7 @@
     .page-header {
             display: flex;
             justify-content: center;
-            align-items: end;
+            align-items: flex-end;
             height: 25em;
         }
         .page-header h1 {

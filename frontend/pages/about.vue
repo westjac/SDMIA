@@ -69,7 +69,7 @@
 <script setup>
   let boardOfDirectors = [
     {
-      name: "Liz Sailer",
+      name: "Elizabeth Sailer",
       company: "Dakota Gold Corp.",
       logo: '/images/logos/dakotagold.png'
     },

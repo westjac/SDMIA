@@ -1,65 +1,72 @@
 <template>
   <!-- START OF DESKTOP NAVIGATION MENU -->
-    <nav v-show="!isMobile" class="top-nav">
-      <v-container>
-        <v-row align="center">
-          <v-col>
-          <a href="/">
+  <nav v-show="!isMobile" class="top-nav">
+    <v-container>
+      <v-row align="center">
+        <v-col>
+          <nuxt-link to="/">
             <v-img src="/images/sdmia.png" alt="Logo" height="110"/>
-          </a>
-            <div class="links">
-            <a v-for="(link, index) in links" :key="index" :href="link.slug"
-            @mouseover="openDropdown(index)"
-            @mouseleave="closeDropdown(index)">
-            {{ link.label }}
-            <div  v-show="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
-              <a
-                v-for="(submenuItem, submenuIndex) in link.submenu"
-                :key="submenuIndex" 
-                class="submenu-item"
-                :href="submenuItem.slug"
-              >
-              {{ submenuItem.label }}
-              </a>
-            </div>
-            </a>
+          </nuxt-link>
+          <div class="links">
+            <nuxt-link
+              v-for="(link, index) in links"
+              :key="index"
+              :to="link.slug"
+              @mouseover="openDropdown(index)"
+              @mouseleave="closeDropdown(index)"
+            >
+              {{ link.label }}
+              <div v-show="link.expanded && link.submenu.length != 0" class="dropdown-menu" :class="{ 'fade-in': link.expanded }">
+                <nuxt-link
+                  v-for="(submenuItem, submenuIndex) in link.submenu"
+                  :key="submenuIndex"
+                  class="submenu-item"
+                  :to="submenuItem.slug"
+                >
+                  {{ submenuItem.label }}
+                </nuxt-link>
+              </div>
+            </nuxt-link>
           </div>
-          </v-col>
-        </v-row>
-      </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
+  </nav>
+
+  <!-- START OF MOBILE NAVIGATION MENU -->
+  <div v-show="isMobile" class="mobile-nav-space"></div>
+  <div v-show="isMobile" class="mobile-nav">
+    <nav class="mobile">
+      <nuxt-link to="/">
+        <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
+      </nuxt-link>
+      <v-icon @click="toggleMobileNav" icon="mdi-menu" size="x-large" color="#123C62" :class="{'icon-active' : mobileNav}"/>
     </nav>
-
-    <!-- START OF MOBILE NAVIGATION MENU -->
-    <div v-show="isMobile" class="mobile-nav-space"></div>
-    <div v-show="isMobile" class="mobile-nav">
-      <nav class="mobile">
-        <a href="/">
-          <v-img src="/images/sdmia.png" alt="Logo" width="175" height="110"/>
-        </a>
-        <v-icon @click="toggleMobileNav" icon="mdi-menu" size="x-large" color="#123C62" :class="{'icon-active' : mobileNav}"/>
-      </nav>
-      <transition>
-        <div v-show="mobileNav" class="dropdownNavigation">
-          <a v-for="(link, index) in links" :key="index" :href="link.slug">
-            {{ link.label }}
-            <span v-show="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
-            <span v-show="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
-            <div v-show="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
-              <a
-                v-for="(submenuItem, submenuIndex) in link.submenu"
-                :key="submenuIndex"
-                class="submenu-item"
-                :href="submenuItem.slug"
-              >
+    <transition>
+      <div v-show="mobileNav" class="dropdownNavigation">
+        <nuxt-link
+          v-for="(link, index) in links"
+          :key="index"
+          :to="link.slug"
+        >
+          {{ link.label }}
+          <span v-show="!link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9654;</span>
+          <span v-show="link.expanded && link.submenu.length !== 0" class="arrow" :class="{ 'expanded': link.expanded }" @click.stop.prevent="toggleSubMenuArrow(link, $event)">&#9660;</span>
+          <div v-show="link.expanded" class="dropdown-menu-mobile" :class="{ 'fade-in': link.expanded }">
+            <nuxt-link
+              v-for="(submenuItem, submenuIndex) in link.submenu"
+              :key="submenuIndex"
+              class="submenu-item"
+              :to="submenuItem.slug"
+            >
               {{ submenuItem.label }}
-              </a>
-            </div>
-          </a>
-        </div>
-      </transition>
-    </div>
-
-  </template>
+            </nuxt-link>
+          </div>
+        </nuxt-link>
+      </div>
+    </transition>
+  </div>
+</template>
   
   <script setup>
     const isMobile = ref(false);
