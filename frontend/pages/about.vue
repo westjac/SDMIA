@@ -115,8 +115,8 @@
     },
     {
       name: "Jason Combs",
-      company: "National Security Innovation Network",
-      logo: '/images/logos/NSIN.png'
+      company: "",
+      logo: '/images/sdmia.png'
     },
     {
       name: "Jon Winter",
