@@ -48,15 +48,15 @@
         <v-container fluid>
           <v-row class="justify-center">
             <v-col
-              v-for="(item, index) in members"
+              v-for="(item, index) in mem.data"
               :key="index"
               cols="12"
               md="4"
               class="d-flex justify-center"
             >
               <div class="text-center">
-                <img :src="item.logo" alt="Company logo" class="logo">
-                <p>{{ item.name }}</p>
+                <img :src="apiBase + item.attributes.CompanyLogo.data.attributes.url" :alt="item.attributes.CompanyLogo.data.attributes.alternativeText" class="logo">
+                <p>{{ item.attributes.CompanyName  }}</p>
               </div>
             </v-col>
           </v-row>
@@ -71,6 +71,12 @@
  const runtimeConfig = useRuntimeConfig()
 const apiBase = runtimeConfig.public.apiBase
 const {data: bod} = await useFetch("http://localhost:1337/api/board-members?populate=*",
+{
+  pick: ["data"],
+}  
+)
+
+const {data: mem} = await useFetch("http://localhost:1337/api/members?populate=*",
 {
   pick: ["data"],
 }  
