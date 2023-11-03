@@ -4,7 +4,8 @@
   "info": {
     "singularName": "board-member",
     "pluralName": "board-members",
-    "displayName": "Board Member"
+    "displayName": "Board Member",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,11 +22,12 @@
       "type": "email"
     },
     "MemberPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

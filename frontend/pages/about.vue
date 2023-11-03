@@ -27,16 +27,16 @@
         <v-container fluid>
           <v-row class="justify-center">
             <v-col
-              v-for="(item, index) in boardOfDirectors"
+              v-for="(item, index) in bod.data"
               :key="index"
               cols="12"
               md="4"
               class="d-flex justify-center"
             >
               <div class="text-center">
-                <img :src="item.logo" alt="Company logo" class="logo">
-                <h2>{{ item.name }}</h2>
-                <p>{{ item.company }}</p>
+                <img :src="apiBase + item.attributes.MemberPhoto.data.attributes.url" :alt="item.attributes.MemberPhoto.data.attributes.alternativeText" class="logo">
+                <h2>{{ item.attributes.Name }}</h2>
+                <p>{{ item.attributes.CompanyName }}</p>
               </div>
             </v-col>
           </v-row>
@@ -67,6 +67,16 @@
 </template>
 
 <script setup>
+ //START API CALL
+ const runtimeConfig = useRuntimeConfig()
+const apiBase = runtimeConfig.public.apiBase
+const {data: bod} = await useFetch("http://localhost:1337/api/board-members?populate=*",
+{
+  pick: ["data"],
+}  
+)
+
+
   let boardOfDirectors = [
     {
       name: "Elizabeth Sailer",
