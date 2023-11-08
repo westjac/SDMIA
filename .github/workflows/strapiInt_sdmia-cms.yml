@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: sdmia.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_d7220eaa547b467b880d0177b217b142 }}/appsvc/staticsite:${{ github.sha }}
-        file: .strapi-cms/Dockerfile
+        file: ./strapi-cms/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
