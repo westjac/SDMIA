@@ -1,21 +1,20 @@
-FROM node:18-alpine
+FROM node:16
 
-ENV PORT 1337
-ENV HOST 0.0.0.0
-ENV NODE_ENV production
+RUN apt-get update && apt-get install libvips-dev -y
 
-# create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
 
-# install dependencies
-COPY package*.json /usr/src/app/
-COPY yarn.lock /usr/src/app/
-RUN yarn install
+WORKDIR /opt/
+COPY ./package.json ./yarn.lock ./
 
-COPY . /usr/src/app/
+ENV PATH /opt/node_modules/.bin:$PATH
+RUN yarn config set network-timeout 600000 -g && yarn install
+
+WORKDIR /opt/app
+COPY ./ .
 
 RUN yarn build
 EXPOSE 1337
 
-CMD ["yarn", "start"]
+CMD ["yarn", "develop"]
