@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: 'ubuntu-latest'
+    defaults:
+      run:
+        working-directory: ./strapi-cms
 
     steps:
     - uses: actions/checkout@v2
@@ -31,7 +34,7 @@ jobs:
       with:
         push: true
         tags: sdmia.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_0bad15580a684112954842fdc8ea1002 }}/mcr.microsoft.com/appsvc/staticsite:${{ github.sha }}
-        file: ./strapi-cms/Dockerfile
+        file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
