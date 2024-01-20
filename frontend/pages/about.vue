@@ -12,13 +12,13 @@
       </div>
       <div class="vision">
         <h1>Our Vision</h1>
-        <p>To honor South Dakota’s world class mining heritage and its natural resource partners by:</p>
+        <p>To Honor South Dakota’s world class mining heritage and its natural resource partners by:</p>
         <br />
         <ul style="list-style-type:circle;">
-          <li>Developing safe, sustainable, and responsible mineral resources.</li>
-          <li>Educating, advocating, and collaborating with educators, local communities, policy makers and members of the public.</li>
-          <li>Recognizing the importance and benefit of responsible natural resource development and use.</li>
-          <li>Sustaining and improving the quality of life for South Dakotans for generations to come.</li>
+          <li>Supporting safe, sustainable, and responsible mineral resource development.</li>
+          <li>Instructing and collaborating with educators, community members, and policy makers.</li>
+          <li>Promoting the importance and benefit of responsible natural resource development and use.</li>
+          <li>Sustaining and improving the quality of life for future generations of South Dakotans.</li>
         </ul>
       </div>
 
