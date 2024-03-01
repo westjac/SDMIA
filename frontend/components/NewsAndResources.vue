@@ -5,16 +5,16 @@
     </div>
         <NewsCard
         photo="/images/annualmeeting2022.jpg"
-        title="SDMIA May 2023 Annual Meeting"
-        description="View our presentation from the May 2023 Annual meeting."
-        link="/docs/May2023AnnualMeeting.pdf"
+        title="SDMIA May 2024 Annual Meeting"
+        description="Register Today for the 2nd Annual Banquet at The Park in Rapid City, SD."
+        link="https://sdmia.wildapricot.org/event-5626252/Registration"
         :index=1
         />
         <NewsCard
         photo="/images/cat.jpg"
         title="SDMIA Membership Form"
         description="Use this form to become a member of the SDMIA."
-        link="/docs/MembershipForm.pdf"
+        link="https://sdmia.wildapricot.org/join-us?pe=5%2bbmdWjcEHaZdXeK%2fqe2dpH2njPHE62qCEC0iUGnGYwWXBymnEm%2f6Wg%2bKuaOA0ukc93H2OC1xqvk3YNTs8puL3YI9ZE%3d"
         :index=2
         />
         <!-- <NewsCard
