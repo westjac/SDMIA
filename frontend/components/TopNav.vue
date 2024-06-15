@@ -132,6 +132,13 @@
         ],
       },
       {
+        label: 'Members Portal',
+        slug: 'https://sdmia.wildapricot.org/',
+        expanded: false,
+        submenu: [
+        ],
+      },
+      {
         label: 'Contact',
         slug: '/contact',
         expanded: false,

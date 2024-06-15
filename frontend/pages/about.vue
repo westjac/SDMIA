@@ -124,6 +124,11 @@
       logo: '/images/logos/encore.png'
     },
     {
+      name: "Meg McNeese",
+      company: "Rose Group International",
+      logo: '/images/logos/roseGroup.png'
+    },
+    {
       name: "Kwinn Neff",
       company: "Managing Director",
       logo: '/images/sdmia.png'
@@ -150,7 +155,7 @@
     { name: 'Simon', logo: '/images/logos/simon.png' },
     { name: 'Mann Strategies', logo: '/images/sdmia.png' },
     { name: 'Stone Land Service', logo: '/images/sdmia.png' },
-    { name: 'Bennett Main Gubbrud & Willert PC', logo: '/images/sdmia.png' },
+    { name: 'Bennett, Main, Gubbrud & Willert, P.C.', logo: '/images/logos/BMGW-Logo.jpg' },
     { name: 'Butler Machinery', logo: '/images/logos/butler.png' },
     { name: 'Caterpillar, Inc.', logo: '/images/logos/cat.png' },
   ]
