@@ -132,6 +132,11 @@
       name: "Kwinn Neff",
       company: "Managing Director",
       logo: '/images/sdmia.png'
+    },    
+    {
+      name: "Ella Francis",
+      company: "Director",
+      logo: '/images/sdmia.png'
     },
   ]
 
@@ -147,7 +152,7 @@
     { name: 'EnCore Energy', logo: '/images/logos/encore.png' },
     { name: 'Barrick', logo: '/images/logos/barrick.png' },
     { name: 'Midwest Lithium', logo: '/images/logos/midwestlithium.png' },
-    { name: 'Solitario Zinc', logo: '/images/logos/solitario.jpg' },
+    { name: 'Solitario Resources', logo: '/images/logos/solitario.jpg' },
     { name: 'Morris, Inc.', logo: '/images/logos/morris.jpg' },
     { name: 'Black Hills Mining Museum', logo: '/images/logos/bhmm.png' },
     { name: 'Gochnour & Associates', logo: '/images/logos/gochnour.jpg' },
@@ -158,6 +163,14 @@
     { name: 'Bennett, Main, Gubbrud & Willert, P.C.', logo: '/images/logos/BMGW-Logo.jpg' },
     { name: 'Butler Machinery', logo: '/images/logos/butler.png' },
     { name: 'Caterpillar, Inc.', logo: '/images/logos/cat.png' },
+    { name: 'Ruen Drilling, Inc.', logo: '/images/logos/Ruen.png' },
+    { name: 'IRIS Metals', logo: '/images/logos/IRISMetals.png' },
+    { name: 'Scion Drilling', logo: '/images/logos/Scion.png' },
+    { name: 'Timberline Drilling', logo: '/images/logos/TimberlineDrilling.png' },
+    { name: 'Hy-Tech Drilling', logo: '/images/logos/HyTech.jpg' },
+    { name: 'Rose Group International', logo: '/images/logos/RoseGroup.png' },
+    { name: 'Knife River', logo: '/images/logos/KnifeRiver.jpg' },
+    { name: 'Buckly Powder Co. ', logo: '/images/logos/BuckleyPowder.jpg' },
   ]
 </script>
 
