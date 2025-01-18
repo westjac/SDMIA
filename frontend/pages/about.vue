@@ -171,6 +171,7 @@
     { name: 'Rose Group International', logo: '/images/logos/RoseGroup.png' },
     { name: 'Knife River', logo: '/images/logos/KnifeRiver.jpg' },
     { name: 'Buckly Powder Co. ', logo: '/images/logos/BuckleyPowder.jpg' },
+    { name: 'Geobrugg ', logo: '/images/logos/Geobrugg.png' },
   ]
 </script>
 
