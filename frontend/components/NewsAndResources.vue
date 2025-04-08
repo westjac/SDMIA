@@ -5,9 +5,9 @@
     </div>
         <NewsCard
         photo="/images/annualmeeting2022.jpg"
-        title="SDMIA May 2024 Annual Meeting"
-        description="Register Today for the 2nd Annual Banquet at The Park in Rapid City, SD."
-        link="https://sdmia.wildapricot.org/event-5626252/Registration"
+        title="SDMIA May 2025 Annual Meeting"
+        description="Register Today for the 3rd Annual Banquet at The Park in Rapid City, SD."
+        link="https://sdmia.wildapricot.org/event-6061669"
         :index=1
         />
         <NewsCard
